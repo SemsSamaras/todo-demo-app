@@ -1,0 +1,23 @@
+@import 'variables';
+
+@mixin focus-visible {
+  &:focus-visible,
+  &:focus-visible {
+    outline: none;
+    border: 2px solid $color-accent;
+  }
+}
+
+@mixin text-field {
+  font-size: $font-size-default;
+  border: 2px $color-grey solid;
+  border-radius: $border-radius-default;
+  padding: 0 2.6rem 0 0.6rem;
+  height: $action-elements-height;
+  width: 100%;
+
+  @media (min-width: $breakpoint-sm) {
+    width: $input-elements-width;
+  }
+  @include focus-visible;
+}
